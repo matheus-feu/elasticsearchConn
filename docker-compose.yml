@@ -4,8 +4,8 @@ services:
 
   elasticsearh:
     build:
-      context: ../ssss
-      dockerfile: ../ssss/Dockerfile
+      context: .
+      dockerfile: Dockerfile
 
     container_name: elasticsearch
     environment:
@@ -20,10 +20,8 @@ services:
       memlock:
         soft: -1
         hard: -1
-    volumes:
-      - ./esdata01:/usr/share/elasticsearch/data
     ports:
       - 9200:9200
-      - 9300:9300
+
 
 
